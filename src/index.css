@@ -1,0 +1,45 @@
+@import "tailwindcss";
+:root {
+  padding: 0;
+  margin: 0;
+  --background: linear-gradient(
+    to bottom,
+    #0D0D0D 0%,    /* Negro profundo y limpio */
+    #141414 50%,   /* Oscuro neutro */
+    #0f0f0f 100%   /* Transición suave a gris oscuro */
+  );
+  --text-color: #000000;
+  --button-background: #000000;
+  --button-text: #ffffff;
+  --font: "Inter", sans-serif;
+}
+
+
+[data-theme='dark'] {
+  --background: #121212;
+  --text-color: #ffffff;
+  --button-background: #ffffff;
+  --button-text: #000000;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: var(--font);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+button:hover {
+  opacity: 0.8;
+}

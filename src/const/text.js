@@ -1,0 +1,1 @@
+export const text = "large-scale, scalable, and maintainable web applications."
