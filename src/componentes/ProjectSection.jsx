@@ -1,7 +1,5 @@
 import React, { Suspense } from "react"
-
-const Card = React.lazy(()=> import('./Card'))
-
+const MappedProjects = React.lazy(()=> import('./MappedProjects.jsx'))
 export default function ProjectSection () {
     return(
         <>
@@ -10,7 +8,7 @@ export default function ProjectSection () {
                 </div>
                 <h2 className='projects-title'>Projects ✨</h2>
             <Suspense fallback={<div>Cargando..</div>}>
-                <Card/>
+               <MappedProjects/>
             </Suspense>
         </>
     )

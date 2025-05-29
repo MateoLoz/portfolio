@@ -1,11 +1,20 @@
 import '../App.css'
 import React, { Suspense } from 'react'
-
+import { useInView } from "react-intersection-observer";
 const NavBar = React.lazy(()=> import('../componentes/Navbar'))
 const AboutMe = React.lazy(()=> import('../componentes/AboutMe'))
 const ProjectSection = React.lazy(()=> import('../componentes/ProjectSection'))
 const Footer = React.lazy(()=> import('../componentes/Footer'))
+
+
 export const PortafolioPage = () => {
+
+     const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.1,
+  });
+
+
 
     return(
   
@@ -19,14 +28,14 @@ export const PortafolioPage = () => {
           </Suspense>
          </div>
           <div className='line'></div>
-         <main id='projects' className='projects-list'>
+         <main ref={ref} id='projects' className={`projects-list ${inView ? 'visible' : ''}`}>
             <Suspense fallback={<div>Cargando..</div>}>
                <ProjectSection/>
             </Suspense>
          </main>
-         <footer id='contact' className='footer-portfolio'>
-          <Footer/>
-         </footer>
+            <Suspense fallback={<div>Cargando..</div>}>
+               <Footer/>
+            </Suspense>
        </div>
 
     )
