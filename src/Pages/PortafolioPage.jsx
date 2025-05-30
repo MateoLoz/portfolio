@@ -5,7 +5,7 @@ const NavBar = React.lazy(()=> import('../componentes/Navbar'))
 const AboutMe = React.lazy(()=> import('../componentes/AboutMe'))
 const ProjectSection = React.lazy(()=> import('../componentes/ProjectSection'))
 const Footer = React.lazy(()=> import('../componentes/Footer'))
-
+const NavegationBar = React.lazy(()=> import('../Navbar/NavegationBar'))
 
 export const PortafolioPage = () => {
 
@@ -19,10 +19,10 @@ export const PortafolioPage = () => {
     return(
   
        <div className="app-container">
-          <div id='about-me' className='about-me-container'>
           <Suspense fallback={<div>Cargando..</div>}>
-            <NavBar/>
+            <NavegationBar/>
           </Suspense>
+          <div id='about-me' className='about-me-container'>
           <Suspense fallback={<div>Cargando..</div>}>
             <AboutMe/>
           </Suspense>

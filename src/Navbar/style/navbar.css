@@ -1,0 +1,72 @@
+.navegation-bar > nav{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    translate: none;
+    transform: translate(0px, 0px);
+}
+
+.navegation-bar > nav {
+    background: transparent;
+    width: 100%;
+    height: 60px;
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 0;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.navegation-ul{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navegation-ul li a {
+    font-family:'PP Neue Montreal Normal' ;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.logo-primary{
+font-family: 'PP Neue Montreal Book';
+font-size: 20px;
+
+   transition-duration: .15s;
+    transition-duration: .75s;
+    transition-property: transform ;
+    transition-timing-function: cubic-bezier(.23,1,.32,1);
+    will-change: transform ;
+}
+
+.logo-secondary{
+font-family: 'PP Neue Montreal Book';
+font-size: 20px;
+transition-duration: .15s;
+transition-duration: .75s;
+transition-property: transform ;
+transition-timing-function: cubic-bezier(.23,1,.32,1);
+will-change: transform;
+transform: translateY(25px); 
+}
+
+.logo-primary.scrolled{
+transform: translateY(-25px);
+
+}
+
+.logo-secondary.scrolled {
+transform: translateY(0px);
+}
