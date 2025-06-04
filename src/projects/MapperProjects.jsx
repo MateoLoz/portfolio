@@ -11,7 +11,7 @@ export default function MapperProjects() {
   })
 
   return (
-    <div className="projects-Mapper-container pl-3 pr-3 pb-25">
+    <div id='projects' className="projects-Mapper-container pl-3 pr-3 pb-25">
       <header ref={ref} className='header-projects'>
         <div className='w-full h-full  pt-2 grid grid-cols-12'>
           <div className='w-full h-full col-span-12 s:col-span-10 mb-10 s:mb-0 relative'>
@@ -31,7 +31,7 @@ export default function MapperProjects() {
           </div>
         </div>
       </header>
-       <div className='mapped-items'>
+       <div  className='mapped-items'>
         {proyects.map(items => {
           const {ref, inView} = useInView({threshold:0.5});
           return <ProjectCard items={items} key={items.id} ref={ref} inView={inView} />

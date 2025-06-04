@@ -3,8 +3,8 @@ import {BrowserRouter , Route , Routes} from 'react-router-dom'
 import './App.css'
 const PortafolioPage = React.lazy(()=> import('./Pages/PortafolioPage'))
 import { AdminPage } from './Pages/AdminPage'
-import ProjectDetail from './Pages/ProjectDetail'
-
+const ProjectDetail = React.lazy(()=> import('./Pages/ProjectDetail')) 
+const ContactMePage = React.lazy(()=> import('./Pages/ContactMePage'))
 
 function App() {
 
@@ -20,6 +20,9 @@ function App() {
        <Route path='/Admin' element={<AdminPage/>}/>
        <Route path='/project/:projectName' element={<Suspense fallback={<div>Cargando..</div>}>
         <ProjectDetail/>
+       </Suspense>} />
+       <Route path='/Contact-Mateo' element={<Suspense fallback={<div>Cargando..</div>}>
+       <ContactMePage/>
        </Suspense>} />
     </Routes>
  

@@ -1,14 +1,14 @@
 import '../App.css'
 import React, { Suspense } from 'react'
 import { useInView } from "react-intersection-observer";
-
-// const AboutMe = React.lazy(()=> import('../componentes/AboutMe'))
-const AboutMe = React.lazy(()=> import('../AboutMe/AboutMe'))
-const Footer = React.lazy(()=> import('../componentes/Footer'))
-const NavegationBar = React.lazy(()=> import('../Navbar/NavegationBar'))
 import LoadPage  from '../Pages/LoadPage'
 import { useLoading } from '../hooks/useLoading';
+
+const AboutMe = React.lazy(()=> import('../AboutMe/AboutMe'))
+const NavegationBar = React.lazy(()=> import('../Navbar/NavegationBar'))
 const MapperProjects = React.lazy(()=> import('../projects/MapperProjects'))
+const Footer = React.lazy(()=> import('../Footer/Footer'))
+
  const PortafolioPage = () => {
    
      const { ref, inView } = useInView({
@@ -29,12 +29,11 @@ const MapperProjects = React.lazy(()=> import('../projects/MapperProjects'))
          <Suspense fallback={<div>Cargando..</div>}>
             <AboutMe/> 
          </Suspense>
-          <div className='line'></div>
          <Suspense fallback={<div>Cargando..</div>}>
             <MapperProjects/>
          </Suspense>
             <Suspense fallback={<div>Cargando..</div>}>
-              <Footer/>
+           <Footer/>
          </Suspense>
        </div>
  }
