@@ -1,42 +1,46 @@
 import '../App.css'
 import React, { Suspense } from 'react'
 import { useInView } from "react-intersection-observer";
-const NavBar = React.lazy(()=> import('../componentes/Navbar'))
-const AboutMe = React.lazy(()=> import('../componentes/AboutMe'))
-const ProjectSection = React.lazy(()=> import('../componentes/ProjectSection'))
+
+// const AboutMe = React.lazy(()=> import('../componentes/AboutMe'))
+const AboutMe = React.lazy(()=> import('../AboutMe/AboutMe'))
 const Footer = React.lazy(()=> import('../componentes/Footer'))
 const NavegationBar = React.lazy(()=> import('../Navbar/NavegationBar'))
-
-export const PortafolioPage = () => {
-
+import LoadPage  from '../Pages/LoadPage'
+import { useLoading } from '../hooks/useLoading';
+const MapperProjects = React.lazy(()=> import('../projects/MapperProjects'))
+ const PortafolioPage = () => {
+   
      const { ref, inView } = useInView({
     /* Optional options */
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
+  const { loading } = useLoading()
 
 
     return(
-  
-       <div className="app-container">
-          <Suspense fallback={<div>Cargando..</div>}>
+      <>
+      {loading == true ? <LoadPage/> : 
+     <div className="app-container">
+      <Suspense fallback={<div> Cargando..</div>}>
             <NavegationBar/>
           </Suspense>
-          <div id='about-me' className='about-me-container'>
-          <Suspense fallback={<div>Cargando..</div>}>
-            <AboutMe/>
-          </Suspense>
-         </div>
+         <Suspense fallback={<div>Cargando..</div>}>
+            <AboutMe/> 
+         </Suspense>
           <div className='line'></div>
-         <main ref={ref} id='projects' className={`projects-list ${inView ? 'visible' : ''}`}>
+         <Suspense fallback={<div>Cargando..</div>}>
+            <MapperProjects/>
+         </Suspense>
             <Suspense fallback={<div>Cargando..</div>}>
-               <ProjectSection/>
-            </Suspense>
-         </main>
-            <Suspense fallback={<div>Cargando..</div>}>
-               <Footer/>
-            </Suspense>
+              <Footer/>
+         </Suspense>
        </div>
-
+ }
+       </>
     )
 }
+
+
+export default PortafolioPage

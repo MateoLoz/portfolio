@@ -1,14 +1,15 @@
 .navegation-bar > nav{
+    position: fixed;
     width: 100%;
     height: 60px;
-    position: fixed;
-    top: 0px;
+    top: 0;
     z-index: 10;
-    translate: none;
-    transform: translate(0px, 0px);
+    opacity: 0;
+    animation: aparecer 0.5s ease forwards ;
+    animation-delay: 1s;
 }
 
-.navegation-bar > nav {
+ nav {
     background: transparent;
     width: 100%;
     height: 60px;
@@ -69,4 +70,80 @@ transform: translateY(-25px);
 
 .logo-secondary.scrolled {
 transform: translateY(0px);
+}
+
+
+
+.border-opacity-10{
+
+ border-top:2px solid rgba(255, 255, 255, 0.096);
+
+}
+
+.border-bottom-opacity-10 {
+border-bottom:2px solid rgba(255, 255, 255, 0.096);  
+}
+
+.modal-container {
+position: relative;
+top: 0px;
+width: 0;
+height: 0;
+z-index: 8;
+opacity: 0;
+background: #1b1b1c;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-duration: 1s;
+translate: none;
+animation: fadein cubic-bezier(.23,1,.32,1) 700ms , fadeout cubic-bezier(.23,1,.32,1) 1s ;
+}
+
+.modal-container.active {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+   clip-path: inset(0 0 0 0);
+}
+
+
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+      
+    }
+    100% {
+        opacity: 1;
+      
+    }
+}
+
+
+@keyframes fadein {
+        0% {
+        clip-path: inset(0 0 100% 0);
+      
+    }
+    100% {
+        width: 100%;
+        height: 100vh;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes fadeout {
+       0% {
+        opacity: 1;
+        width: 100%;
+        height: 100vh;
+        clip-path: inset(0 0 0  0);
+      
+    }
+    100% {
+        clip-path: inset(0 0 100% 0);
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+    }
 }

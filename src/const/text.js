@@ -1,1 +1,2 @@
 export const text = "large-scale, scalable, and maintainable web applications."
+export const meText = [" Hi! I'm Mateo Lozano,", "a 20-year-old full-stack developer", "specializing in React and Node.js.", "I'm passionate about building modern, responsive,", "and high-performance web applications", "that deliver real value to users."] 

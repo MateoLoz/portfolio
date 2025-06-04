@@ -1,0 +1,155 @@
+.projects-Mapper-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    overflow: hidden;
+}
+
+.header-projects{
+    width: 100%;
+    height: 25vh;
+}
+
+.projects-tag{
+top: 5px;
+position: absolute;
+left: 5px;
+}
+
+.name-text{
+    display: flex;
+    width: 100%;
+    font-family: 'PP Neue Montreal Book';
+    font-size: clamp(2rem, 3.4rem, 5.3vw);
+    font-weight: 600;
+    position: relative;
+    text-indent: 6rem;
+    transform: translateY(-45px);
+    opacity: 0;
+    transition: transform ease 500ms , opacity ease 350ms;
+}
+
+.name-text.visi {
+     opacity: 1;
+     transform: translateY(0px);
+}
+
+.name-text2{
+    display: flex;
+    width: 100%;
+    font-family: 'PP Neue Montreal Book';
+    font-size: clamp(2rem, 3.4rem, 5.3vw);
+    font-weight: 600;
+    position: relative;
+    transform: translateY(-45px);
+    opacity: 0;
+    transition: transform ease 500ms , opacity ease 350ms;
+
+}
+
+.name-text2.visi {
+     opacity: 1;
+     transform: translateY(0px);
+}
+
+.mapped-items {
+position: relative;
+display: grid;
+grid-template-columns: repeat(12,minmax(0,1fr));
+grid-template-rows: auto;
+column-gap: 1rem;
+row-gap: 1rem;
+transform: none;
+translate: none;
+rotate: none;
+scale: none;
+}
+
+.card-mapped-container{
+opacity: 0;
+transform: translateY(-20px);
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+grid-column: span 6 / span 6;
+transition: opacity ease 300ms , transform ease 600ms;
+}
+
+.card-mapped-container.active {
+ opacity: 1;
+ transform: translateY(0px); 
+}
+
+.video-container{
+    position: relative;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 100%;
+    height: 85%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.project-type{
+background-color: white;
+mix-blend-mode: difference;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 0.7rem;
+padding: 0.2em;
+padding-left: 0.4em;
+padding-right: 0.4em;
+border-radius: 24px;
+z-index: 5;
+}
+
+.project-name{
+    overflow: hidden;
+    font-family: 'PP Neue Montreal Normal';
+    color: #1b1b1c;
+    font-weight: 500;
+    font-size: clamp(0.4rem,1rem,1.1rem) ;
+}
+
+.know-more-tag{
+font-family: 'PP Neue Montreal Normal';
+color: rgb(133, 133, 133);
+ font-size: clamp(0.3rem, 0.8rem, 1.2rem);
+}
+
+.know-more-tag:hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 825px ){
+.mapped-items {
+position: relative;
+display: grid;
+grid-template-columns: repeat(24,minmax(0,1fr));
+grid-template-rows: auto;
+column-gap: 1rem;
+transform: none;
+translate: none;
+rotate: none;
+scale: none;
+}
+
+.card-mapped-container{
+position: relative;
+grid-column: span 6 / span 6;
+}
+
+
+}

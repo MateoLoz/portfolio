@@ -2,16 +2,12 @@
 :root {
   padding: 0;
   margin: 0;
-  --background: linear-gradient(
-    to bottom,
-    #0D0D0D 0%,    /* Negro profundo y limpio */
-    #141414 50%,   /* Oscuro neutro */
-    #0f0f0f 100%   /* Transición suave a gris oscuro */
-  );
+  --background: #f1f1f1;
   --text-color: #000000;
   --button-background: #000000;
   --button-text: #ffffff;
   --font: "Inter", sans-serif;
+
 }
 
 
@@ -42,4 +38,8 @@ button {
 
 button:hover {
   opacity: 0.8;
+}
+
+html {
+  scroll-behavior: smooth;
 }
