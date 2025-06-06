@@ -26,17 +26,17 @@ export default function ProjectDetail () {
       {descripcion}
       </p>
      </section>
-     <section className="w-full pt-4 h-30 pb-10">
+     <section className="w-full pt-4  pb-10">
       <span className="pl-5 pt-2 absolute">(tecnology's)</span>
-      <aside className="pl-35 pt-6 pr-30 w-full flex flex-row gap-5">
+      <aside className="pl-5 pr-5 lg:pl-35 pt-15 lg:pt-6  lg:pr-30 w-full  grid grid-cols-3 gap-2  sm:flex sm:flex-row gap-2 lg:gap-5">
          {tecnology.map(items=>(
-        <h2 key={items} className=" tecnology-tags font-var('PP Neue Montreal Book') whitespace-nowrap text-xl">#{items}</h2>
+        <h2 key={items} className=" tecnology-tags font-var('PP Neue Montreal Book') text-center whitespace-nowrap text-sm lg:text-xl">#{items}</h2>
       ))}
       </aside>
      </section>
-     <section className="w-full pt-4 h-40 pb-10 flex flex-col gap-4">
-       <span className="pl-5 pt-2 absolute">(Demo)</span>
-     <video className="pt-15 pl-5 pr-5 rounded-xl " autoPlay loop muted>
+     <section className="w-full pl-5 pt-4  pb-10 flex flex-col gap-4">
+       <span className="pt-2 absolute">(Demo)</span>
+     <video className="pt-15 pr-5 rounded-xl contain " autoPlay loop muted>
       <source className="rounded-xl" src={demo} type="video/mp4" />
      </video>
      <section className="w-full h-50 pl-5 pr-5">
