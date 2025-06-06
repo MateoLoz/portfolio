@@ -4,7 +4,7 @@ import './App.css'
 const PortafolioPage = React.lazy(()=> import('./Pages/PortafolioPage'))
 import { AdminPage } from './Pages/AdminPage'
 import ProjectDetail from './Pages/ProjectDetail'
-
+const ContactMateoPage = React.lazy(()=> import('./Pages/ContactMateoPage'))
 
 function App() {
 
@@ -20,6 +20,9 @@ function App() {
        <Route path='/Admin' element={<AdminPage/>}/>
        <Route path='/project/:projectName' element={<Suspense fallback={<div>Cargando..</div>}>
         <ProjectDetail/>
+       </Suspense>} />
+       <Route path='/Contact-Mateo' element={<Suspense fallback={<div>Cargando..</div>}>
+        <ContactMateoPage/>
        </Suspense>} />
     </Routes>
  

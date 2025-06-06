@@ -6,7 +6,7 @@
     z-index: 10;
     opacity: 0;
     animation: aparecer 0.5s ease forwards ;
-    animation-delay: 1s;
+    animation-delay: 150ms;
 }
 
  nav {
@@ -85,7 +85,7 @@ border-bottom:2px solid rgba(255, 255, 255, 0.096);
 }
 
 .modal-container {
-position: relative;
+position: fixed;
 top: 0px;
 width: 0;
 height: 0;
@@ -96,8 +96,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 animation-duration: 1s;
-translate: none;
-animation: fadein cubic-bezier(.23,1,.32,1) 700ms , fadeout cubic-bezier(.23,1,.32,1) 1s ;
 }
 
 .modal-container.active {
