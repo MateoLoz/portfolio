@@ -1,20 +1,15 @@
 import "../App.css";
 import React, { Suspense } from "react";
-import { useInView } from "react-intersection-observer";
 
 const AboutMe = React.lazy(() => import("../AboutMe/AboutMe"));
 const WelcomeBanner = React.lazy(() => import("../welcome/WelcomeBanner"));
 const Footer = React.lazy(() => import("../Footer/Footer"));
 const NavegationBar = React.lazy(() => import("../Navbar/NavegationBar"));
+const TechSection = React.lazy(() => import("../techologies/TechSection"));
 import LoadPage from "../Pages/LoadPage";
 import { useLoading } from "../hooks/useLoading";
 const MapperProjects = React.lazy(() => import("../projects/MapperProjects"));
 const PortafolioPage = () => {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    threshold: 0.3,
-  });
-
   const { loading } = useLoading();
 
   return (
@@ -31,6 +26,9 @@ const PortafolioPage = () => {
           </Suspense>
           <Suspense fallback={<div></div>}>
             <AboutMe />
+          </Suspense>
+          <Suspense fallback={<div></div>}>
+            <TechSection />
           </Suspense>
           <Suspense fallback={<div></div>}>
             <MapperProjects />
