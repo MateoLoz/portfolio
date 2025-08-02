@@ -16,7 +16,7 @@ export default function useDownloadCv() {
 
     try {
       const link = document.createElement("a");
-      link.href = "/cv/Mateo-Agustin-Lozano-Guardia-CV-EN.docx"; // archivo en public/cv/
+      link.href = "./cv/Mateo-Agustin-Lozano-Guardia-CV-EN.docx"; // archivo en public/cv/
       link.download = "Mateo-Lozano-Guardia-CV-EN.docx";
 
       document.body.appendChild(link);

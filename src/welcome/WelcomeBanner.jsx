@@ -42,7 +42,7 @@ const WelcomeBanner = () => {
         {description}
       </p>
       <div
-        className={`z-4 md:w-[30vw] w-[70vw] flex flex-row gap-2 ${
+        className={`z-4 md:w-[50vw] w-[70vw] flex flex-row items-center justify-center gap-2 ${
           hasBeenInView ? "appearbuttons" : "hidetext"
         }`}
       >

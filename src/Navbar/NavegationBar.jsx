@@ -36,9 +36,9 @@ export default function NavegationBar  () {
                 </section>
                 {
                     width > 650 ? <ul className="navegation-ul" onClick={()=> setclick(!click)}>
-              <li> <a href="/#about-me">Home,</a></li>
-              <li> <a href="/#projects">Projects,</a></li>
-              <li><a href="/#Curriculum">Cv</a></li>
+              <li> <a href="/#about-me">Home</a></li>
+              <li> <a href="/#projects">Projects</a></li>
+              <li><a href="/">Cv</a></li>
             </ul> : null
                 }
             {width > 650 ? <section className="cursor-pointer" onClick={()=> nav(route)}>Contact Mateo</section> : <Menu setopen={setOpenMenu} menu={menu}/>}
