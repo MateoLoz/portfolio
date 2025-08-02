@@ -1,3 +1,18 @@
+import "../../assets/techs/html.webp"
+import "../../assets/techs/css.webp"
+import "../../assets/techs/js.webp"
+import "../../assets/techs/react.webp"
+import "../../assets/techs/typescript.webp"
+import "../../assets/techs/nodejs.png"
+import "../../assets/techs/express.png"
+import "../../assets/techs/c-sharp.webp"
+import "../../assets/techs/git.png"
+import "../../assets/techs/github.png"
+import "../../assets/techs/jira.webp"
+import "../../assets/techs/docker.webp"
+import "../../assets/techs/sql-server.png"
+import "../../assets/techs/postgre.webp"
+import "../../assets/techs/render.webp"
 
 export const tech = [
   {
