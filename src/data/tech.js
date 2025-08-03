@@ -1,9 +1,9 @@
-
+import html from '../../assets/techs/html.webp'
 
 export const tech = [
   {
     id: 1,
-    url: "./portafolio/assets/techs/html.webp",
+    url: html,
     name: "Html",
   },
   {
