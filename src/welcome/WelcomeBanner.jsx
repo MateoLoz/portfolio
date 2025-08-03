@@ -22,13 +22,14 @@ const WelcomeBanner = () => {
   return (
     <div
       ref={ref}
+      id="home"
       className={`z-4 w-full h-[95vh] flex flex-col gap-6 justify-center items-center ${
         hasBeenInView ? "apearbanner" : "hidebanner"
       }`}
     >
       <div className=" z-0 absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[40%] translate-y-[30%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
       <span
-        className={`z-4  overflow-hidden font-[PP Neue Montreal Normal] text-black text-[clamp(1.6rem,5.3vw,3.5rem)] ${
+        className={`z-4  overflow-hidden font-[PP Neue Montreal Normal] text-black text-[clamp(1.7rem,5rem,5.5vw)] ${
           hasBeenInView ? "appertext" : "hidetext"
         }`}
       >

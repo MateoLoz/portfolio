@@ -36,7 +36,8 @@ export default function NavegationBar  () {
                 </section>
                 {
                     width > 650 ? <ul className="navegation-ul" onClick={()=> setclick(!click)}>
-              <li> <a href="/#about-me">Home</a></li>
+              <li> <a href="/#home">Home</a></li>
+              <li> <a href="/#Technologies">Technologies</a></li>
               <li> <a href="/#projects">Projects</a></li>
               <li><a href="/">Cv</a></li>
             </ul> : null
@@ -70,9 +71,9 @@ export const Modal = ({menu,setOpenMenu, scroll}) => {
         <>
         <div className={`modal-container ${menu == true ? 'active' : ''} `} style={{animation: menu == true ? 'fadein cubic-bezier(.23,1,.32,1) 700ms' : 'fadeout cubic-bezier(.23,1,.32,1) 700ms', transform: `translateY(${scroll}px)`}}>
            <ul className="w-full h-full items-center justify-center flex flex-col text-white text-3xl">
-              <li className="p-6 w-full text-center  border-opacity-10"> <a  href="/#about-me" onClick={()=>setOpenMenu(!menu)}>Home</a></li>
-              <li className="p-6 w-full text-center border-opacity-10"> <a href="/#projects" onClick={()=>setOpenMenu(!menu)}>Projects</a></li>
-              <li className="p-6 w-full text-center border-opacity-10"><a href="/#Curriculum" onClick={()=>setOpenMenu(!menu)}>Cv</a></li>
+              <li className="p-6 w-full text-center  border-opacity-10"> <a  href="#home" onClick={()=>setOpenMenu(!menu)}>Home</a></li>
+              <li className="p-6 w-full text-center border-opacity-10"> <a href="#projects" onClick={()=>setOpenMenu(!menu)}>Projects</a></li>
+              <li className="p-6 w-full text-center border-opacity-10"><a href="/Curriculum" onClick={()=>setOpenMenu(!menu)}>Cv</a></li>
               <li className="p-6 w-full text-center border-bottom-opacity-10  border-opacity-10"><a href="/Contact-Mateo" className="cursor-pointer" onClick={()=>{setOpenMenu(!menu);nav(route)}}>Contact Mateo</a></li>
             </ul>
         </div>

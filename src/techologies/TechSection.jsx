@@ -11,6 +11,7 @@ const TechSection = () => {
   return (
     <div
       ref={ref}
+      id="Technologies"
       className={`w-full min-h-[100vh] transition-opacity ease-in-out duration-300  ${
         inView ? "opacity-100" : "opacity-[0%]"
       }`}
@@ -21,7 +22,11 @@ const TechSection = () => {
         </small>
       </header>
       {/* Mapper de tecnologias y leanguajes */}
-      <aside className="w-full  grid grid-cols-[repeat(auto-fill,300px)] gap-4 place-content-center">
+      <aside className="w-full p-8  grid  
+       md:grid-cols-[repeat(auto-fit,minmax(16vw,1fr))]
+        sm:grid-cols-[repeat(auto-fit,minmax(25vw,1fr))]
+        grid-cols-[repeat(auto-fit,minmax(35vw,1fr))]
+       gap-4 place-content-center">
         {currentItems.map((items) => (
           <TechCard key={items.id} imageUrl={items.url} techName={items.name} />
         ))}

@@ -7,7 +7,7 @@ export default function AboutMe () {
     const [width,setWidth] = useState(0)
 
     const {ref, inView} = useInView({
-        threshold:0.7
+        threshold:0.4,
     })
 
     const handleWidth = () => {
@@ -39,16 +39,16 @@ export default function AboutMe () {
                   <p className={`about-me-paraghap1 ${inView ? 'apear' : ''}`}>{meText[1]}</p>
              </div>
                <div className='flex overflow-hidden'>
-                  <p className={`about-me-paraghap1 ${inView ? 'apear' : ''}`}>{meText[2]}</p>
+                  <p className={`about-me-paraghap2  ${inView ? 'apear' : ''}`}>{meText[2]}</p>
              </div>
               <div className='flex overflow-hidden'>
-                  <p className={`about-me-paraghap1 ${inView ? 'apear' : ''}`}>{meText[3]}</p>
+                  <p className={`about-me-paraghap3  ${inView ? 'apear' : ''}`}>{meText[3]}</p>
              </div>
              <div className='flex overflow-hidden'>
-                  <p className={`about-me-paraghap1 ${inView ? 'apear' : ''}`}>{meText[4]}</p>
+                  <p className={`about-me-paraghap4  ${inView ? 'apear' : ''}`}>{meText[4]}</p>
              </div>
               <div className='flex overflow-hidden'>
-                  <p className={`about-me-paraghap1 ${inView ? 'apear' : ''}`}>{meText[5]}</p>
+                  <p className={`about-me-paraghap5 ${inView ? 'apear' : ''}`}>{meText[5]}</p>
              </div>
             </div>
          </div>

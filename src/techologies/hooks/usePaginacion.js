@@ -24,7 +24,7 @@ export function usePaginacion() {
 
   const handleViewItems = useCallback(() => {
     const width = window.innerWidth;
-    if (width < 768) return setItemsPerPage(2);
+    if (width < 768) return setItemsPerPage(4);
     if (width < 1024) return setItemsPerPage(4);
     if (width < 1240) return setItemsPerPage(6);
     return setItemsPerPage(8);

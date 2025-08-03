@@ -8,6 +8,7 @@ const NavegationBar = React.lazy(() => import("../Navbar/NavegationBar"));
 const TechSection = React.lazy(() => import("../techologies/TechSection"));
 import LoadPage from "../Pages/LoadPage";
 import { useLoading } from "../hooks/useLoading";
+const DeveloperJourney = React.lazy(()=> import("../RoadMap/RoadMap"));
 const MapperProjects = React.lazy(() => import("../projects/MapperProjects"));
 const PortafolioPage = () => {
   const { loading } = useLoading();
@@ -32,6 +33,9 @@ const PortafolioPage = () => {
           </Suspense>
           <Suspense fallback={<div></div>}>
             <MapperProjects />
+          </Suspense>
+            <Suspense fallback={<div></div>}>
+            <DeveloperJourney/>
           </Suspense>
           <Suspense fallback={<div></div>}>
             <Footer />

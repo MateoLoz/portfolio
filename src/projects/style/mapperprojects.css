@@ -26,12 +26,14 @@ left: 5px;
     text-indent: 6rem;
     transform: translateY(-45px);
     opacity: 0;
-    transition: transform ease 500ms , opacity ease 350ms;
+    transition: transform ease 800ms , opacity ease 800ms;
+    transition-delay: 160ms;
 }
 
 .name-text.visi {
      opacity: 1;
      transform: translateY(0px);
+
 }
 
 .name-text2{
@@ -43,7 +45,8 @@ left: 5px;
     position: relative;
     transform: translateY(-45px);
     opacity: 0;
-    transition: transform ease 500ms , opacity ease 350ms;
+    transition: transform ease 800ms , opacity ease 800ms;
+     transition-delay: 300ms;
 
 }
 
