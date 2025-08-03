@@ -1,5 +1,18 @@
 import html from '../../assets/techs/html.webp'
-
+import css from '../../assets/techs/css.webp'
+import js from '../../assets/techs/js.webp'
+import react from '../../assets/techs/react.webp'
+import ts from '../../assets/techs/typescript.webp'
+import node from '../../assets/techs/nodejs.png'
+import express from '../../assets/techs/express.png'
+import cs from '../../assets/techs/c-sharp.webp"'
+import git from '../../assets/techs/git.png'
+import github from '../../assets/techs/github.png'
+import jira from '../../assets/techs/jira.webp'
+import docker from '../../assets/techs/docker.webp'
+import sql from '../../assets/techs/sql-server.png'
+import postgresql from '../../assets/techs/postgre.webp'
+import render from '../../assets/techs/render.webp'
 export const tech = [
   {
     id: 1,
@@ -8,72 +21,72 @@ export const tech = [
   },
   {
     id: 2,
-    url: "../../assets/techs/css.webp",
+    url: css,
     name: "Css",
   },
   {
     id: 3,
-    url: "../../assets/techs/js.webp",
+    url: js,
     name: "Javascript",
   },
   {
     id: 4,
-    url: "../../assets/techs/react.webp",
+    url: react,
     name: "React",
   },
   {
     id: 5,
-    url: "../../assets/techs/typescript.webp",
+    url: ts,
     name: "Typescript",
   },
   {
     id: 6,
-    url: "../../assets/techs/nodejs.png",
+    url: node,
     name: "NodeJs",
   },
   {
     id: 7,
-    url: "../../assets/techs/express.png",
+    url: express,
     name: "Express",
   },
   {
     id: 8,
-    url: "../../assets/techs/c-sharp.webp",
+    url: cs,
     name: "C-Sharp",
   },
   {
     id: 9,
-    url: "../../assets/techs/git.png",
+    url: git,
     name: "Git",
   },
   {
     id: 10,
-    url: "../../assets/techs/github.png",
+    url: github,
     name: "Github",
   },
   {
     id: 11,
-    url: "../../assets/techs/jira.webp",
+    url: jira,
     name: "Jira",
   },
   {
     id: 12,
-    url: "../../assets/techs/docker.webp",
+    url: docker,
     name: "Docker",
   },
   {
     id: 13,
-    url: "../../assets/techs/sql-server.png",
+    url: sql,
     name: "Sql",
   },
   {
     id: 14,
-    url: "../../assets/techs/postgre.webp",
+    url: postgresql,
     name: "PostgreSql",
   },
   {
     id: 15,
-    url: "../../assets/techs/render.webp",
+    url: render,
     name: "Render",
   },
 ];
