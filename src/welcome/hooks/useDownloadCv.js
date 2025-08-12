@@ -8,35 +8,22 @@ export default function useDownloadCv() {
 
   const handleCv = (e) => {
     e.preventDefault();
-    setCvButton((prev) => ({
-      ...prev,
-      value: true,
-      message: "Downloading...",
-    }));
+    setCvButton({ value: true, message: "Downloading..." });
 
     try {
       const link = document.createElement("a");
-      link.href = "./cv/Mateo-Agustin-Lozano-Guardia-CV-EN.docx"; // archivo en public/cv/
-      link.download = "Mateo-Lozano-Guardia-CV-EN.docx";
-
+      link.href = "/cv/Mateo_Lozano_Guardia_CV_v2.pdf"; // Ruta absoluta desde /public
+      link.download = "Mateo_Lozano_Guardia_CV_v2.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
 
       setTimeout(() => {
-        setCvButton((prev) => ({
-          ...prev,
-          value: false,
-          message: "Downloaded!",
-        }));
+        setCvButton({ value: false, message: "Downloaded!" });
       }, 1200);
     } catch (err) {
       console.error(err);
-      setCvButton((prev) => ({
-        ...prev,
-        value: false,
-        message: "Download failed!",
-      }));
+      setCvButton({ value: false, message: "Download failed!" });
     }
   };
 
